@@ -38,7 +38,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
         {
             name: 'bass',
-            image: 'images/bass.jpeg'
+            img: 'images/bass.jpeg'
+        },
+        
+        {
+            name: 'bobber',
+            img: 'images/bobber.jpeg'
+        },
+
+        {
+            name: 'fishingpole',
+            img: 'images/fishingpole.jpeg'
+        },
+
+        {
+            name: 'hat',
+            img: 'images/hat.jpeg'
+        },
+
+        {
+            name: 'hook',
+            img: 'images/hook.jpeg',
+        },
+
+        {
+            name: 'kayak',
+            img: 'images/kayak.jpeg'
+        },
+
+        {
+            name: 'lure',
+            img: 'images/lure.jpeg'
+        },
+
+        {
+            name: 'water',
+            img: 'images/Water.jpeg'
+        },
+
+        {
+            name: 'bass',
+            img: 'images/bass.jpeg'
         } 
     ]
 
@@ -89,9 +129,9 @@ function checkForMatch(){
 
 function flipCard(){
     var cardId = this.getAttribute('data-id')
-    cardsChosen.push(cardArray[cardId.name])
-    cardsChosenId.push(CardId)
-    this.setAttribute('src', cardArray[CardId.img])
+    cardsChosen.push(cardArray[cardId].name)
+    cardsChosenId.push(cardId)
+    this.setAttribute('src', cardArray[cardId].img)
     if (cardsChosen.length === 2) {
         setTimeout(checkForMatch, 500)
     }
